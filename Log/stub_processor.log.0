@@ -1,0 +1,303 @@
+[2026-04-21 10:58:54] [INFO] Starting Expleo PT AMQ Simulator UI 
+[2026-04-21 10:58:59] [INFO] Connecting to Expleo PT AMQ at tcp://amq.uat.ipp.aletihadpayments.ae:443?sslEnabled=true&trustStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&trustStorePassword=password&keyStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&keyStorePassword=password&verifyHost=false... 
+[2026-04-21 10:58:59] [INFO] Connecting to Expleo PT AMQ at tcp://amq.uat.ipp.aletihadpayments.ae:443?sslEnabled=true&trustStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&trustStorePassword=password&keyStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&keyStorePassword=password&verifyHost=false... 
+[2026-04-21 10:59:02] [INFO] Connected successfully. Subscribed to UAEIPP.LULUAEAD.Out... 
+[2026-04-21 10:59:02] [INFO] Connected successfully. Subscribed to UAEIPP.E342XXXX.Out... 
+[2026-04-21 10:59:02] [INFO] High-Performance Mode ACTIVE. Disk logging is bypassed. 
+[2026-04-21 10:59:02] [INFO] High-Performance Mode ACTIVE. Disk logging is bypassed. 
+[2026-04-21 10:59:32] [INFO] [PERFORMANCE] Processed 1 msgs in 5s. (TPS: 0.20) | Total: 1 | Errors: 0 
+[2026-04-21 11:12:26] [INFO] Starting Expleo PT AMQ Simulator UI 
+[2026-04-21 11:12:28] [INFO] Connecting to Expleo PT AMQ at tcp://amq.uat.ipp.aletihadpayments.ae:443?sslEnabled=true&trustStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&trustStorePassword=password&keyStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&keyStorePassword=password&verifyHost=false... 
+[2026-04-21 11:12:28] [INFO] Connecting to Expleo PT AMQ at tcp://amq.uat.ipp.aletihadpayments.ae:443?sslEnabled=true&trustStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&trustStorePassword=password&keyStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&keyStorePassword=password&verifyHost=false... 
+[2026-04-21 11:12:30] [INFO] Connected successfully. Subscribed to UAEIPP.LULUAEAD.Out... 
+[2026-04-21 11:12:30] [INFO] Connected successfully. Subscribed to UAEIPP.E342XXXX.Out... 
+[2026-04-21 11:12:30] [INFO] High-Performance Mode ACTIVE. Disk logging is bypassed. 
+[2026-04-21 11:12:30] [INFO] High-Performance Mode ACTIVE. Disk logging is bypassed. 
+[2026-04-21 11:12:40] [INFO] [PERFORMANCE] Processed 1 msgs in 5s. (TPS: 0.20) | Total: 1 | Errors: 0 
+[2026-04-21 11:17:45] [INFO] [PERFORMANCE] Processed 1 msgs in 5s. (TPS: 0.20) | Total: 2 | Errors: 0 
+[2026-04-21 11:36:03] [INFO] Starting Expleo PT AMQ Simulator UI 
+[2026-04-21 11:36:06] [INFO] Connecting to Expleo PT AMQ at tcp://amq.uat.ipp.aletihadpayments.ae:443?sslEnabled=true&trustStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&trustStorePassword=password&keyStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&keyStorePassword=password&verifyHost=false... 
+[2026-04-21 11:36:06] [INFO] Connecting to Expleo PT AMQ at tcp://amq.uat.ipp.aletihadpayments.ae:443?sslEnabled=true&trustStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&trustStorePassword=password&keyStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&keyStorePassword=password&verifyHost=false... 
+[2026-04-21 11:36:08] [INFO] Connected successfully. Subscribed to UAEIPP.E342XXXX.Out... 
+[2026-04-21 11:36:08] [INFO] High-Performance Mode ACTIVE. Disk logging is bypassed. 
+[2026-04-21 11:36:09] [INFO] Connected successfully. Subscribed to UAEIPP.LULUAEAD.Out... 
+[2026-04-21 11:36:09] [INFO] High-Performance Mode ACTIVE. Disk logging is bypassed. 
+[2026-04-21 11:37:04] [INFO] [PERFORMANCE] Processed 2 msgs in 5s. (TPS: 0.40) | Total: 2 | Errors: 0 
+[2026-04-21 11:42:27] [INFO] Starting Expleo PT AMQ Simulator UI 
+[2026-04-21 11:42:32] [INFO] Connecting to Expleo PT AMQ at tcp://amq.uat.ipp.aletihadpayments.ae:443?sslEnabled=true&trustStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&trustStorePassword=password&keyStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&keyStorePassword=password&verifyHost=false... 
+[2026-04-21 11:42:32] [INFO] Connecting to Expleo PT AMQ at tcp://amq.uat.ipp.aletihadpayments.ae:443?sslEnabled=true&trustStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&trustStorePassword=password&keyStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&keyStorePassword=password&verifyHost=false... 
+[2026-04-21 11:42:32] [INFO] Connecting to Expleo PT AMQ at tcp://amq.uat.ipp.aletihadpayments.ae:443?sslEnabled=true&trustStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&trustStorePassword=password&keyStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&keyStorePassword=password&verifyHost=false... 
+[2026-04-21 11:42:34] [INFO] Connected successfully. Subscribed to UAEIPP.SAMBAEAD.Out... 
+[2026-04-21 11:42:34] [INFO] Connected successfully. Subscribed to UAEIPP.LULUAEAD.Out... 
+[2026-04-21 11:42:34] [INFO] Connected successfully. Subscribed to UAEIPP.E342XXXX.Out... 
+[2026-04-21 11:42:34] [INFO] High-Performance Mode ACTIVE. Disk logging is bypassed. 
+[2026-04-21 11:42:34] [INFO] High-Performance Mode ACTIVE. Disk logging is bypassed. 
+[2026-04-21 11:42:34] [INFO] High-Performance Mode ACTIVE. Disk logging is bypassed. 
+[2026-04-21 11:42:39] [INFO] [PERFORMANCE] Processed 91 msgs in 5s. (TPS: 18.20) | Total: 91 | Errors: 0 
+[2026-04-21 11:44:08] [INFO] === Safely Extracted from PACS.004 === 
+[2026-04-21 11:44:08] [INFO] amount =  
+[2026-04-21 11:44:08] [INFO] instd_bic = LULUAEAD 
+[2026-04-21 11:44:08] [INFO] dbtr_bic = AEPCAEA0 
+[2026-04-21 11:44:08] [INFO] orgnl_end_to_end_id =  
+[2026-04-21 11:44:08] [INFO] orgnl_tx_id =  
+[2026-04-21 11:44:08] [INFO] rtr_id =  
+[2026-04-21 11:44:08] [INFO] tx_id =  
+[2026-04-21 11:44:08] [INFO] nb_of_txs =  
+[2026-04-21 11:44:08] [INFO] orgnl_clr_sys_ref =  
+[2026-04-21 11:44:08] [INFO] orgnl_msg_id =  
+[2026-04-21 11:44:08] [INFO] cdtr_bic = LULUAEAD 
+[2026-04-21 11:44:08] [INFO] clr_sys_ref =  
+[2026-04-21 11:44:08] [INFO] instg_bic = AEPCAEA0 
+[2026-04-21 11:44:08] [INFO] end_to_end_id =  
+[2026-04-21 11:44:08] [INFO] uetr =  
+[2026-04-21 11:44:08] [INFO] cre_dt_tm = 2026-04-21T11:44:08.279+04:00 
+[2026-04-21 11:44:08] [INFO] orgnl_msg_nm_id =  
+[2026-04-21 11:44:08] [INFO] msg_type = pacs.004 
+[2026-04-21 11:44:08] [INFO] currency =  
+[2026-04-21 11:44:08] [INFO] msg_id = IPPCP0mo8bid7b00 
+[2026-04-21 11:44:08] [INFO] orgnl_uetr =  
+[2026-04-21 11:44:08] [INFO] Building PACS.002 response natively for PACS.004... 
+[2026-04-21 11:44:08] [INFO] PACS.002 Document successfully generated for OrgnlMsgId: IPPCP0mo8bid7b00 
+[2026-04-21 11:44:09] [INFO] Ignored unsupported message type. 
+[2026-04-21 11:44:09] [INFO] [PERFORMANCE] Processed 1 msgs in 5s. (TPS: 0.20) | Total: 1 | Errors: 0 
+[2026-04-21 11:44:45] [INFO] === Safely Extracted from PACS.008 === 
+[2026-04-21 11:44:45] [INFO] amount = 1.00 
+[2026-04-21 11:44:45] [INFO] dbtr_bic = SAMBAEAD 
+[2026-04-21 11:44:45] [INFO] ctgy_purp_cd =  
+[2026-04-21 11:44:45] [INFO] svc_lvl_prtry =  
+[2026-04-21 11:44:45] [INFO] sttlm_dt = 2026-04-21 
+[2026-04-21 11:44:45] [INFO] tx_id = TxId_20260421114443_008_36911 
+[2026-04-21 11:44:45] [INFO] nb_of_txs = 1 
+[2026-04-21 11:44:45] [INFO] instr_id = InsId_20260421114443_008_17799 
+[2026-04-21 11:44:45] [INFO] ctgy_purp_prtry = IPP 
+[2026-04-21 11:44:45] [INFO] lcl_instrm_cd =  
+[2026-04-21 11:44:45] [INFO] cdtr_bic = LULUAEAD 
+[2026-04-21 11:44:45] [INFO] clr_sys_ref = INSTP0mo8bj5m300 
+[2026-04-21 11:44:45] [INFO] end_to_end_id = E2E_20260421114443_008_41448 
+[2026-04-21 11:44:45] [INFO] svc_lvl_cd =  
+[2026-04-21 11:44:45] [INFO] uetr = 86c09bda-9bb0-462e-8f6f-1981f409f834 
+[2026-04-21 11:44:45] [INFO] cre_dt_tm = 2026-04-21T11:44:43.994+04:00 
+[2026-04-21 11:44:45] [INFO] lcl_instrm_prtry = INST 
+[2026-04-21 11:44:45] [INFO] currency = AED 
+[2026-04-21 11:44:45] [INFO] msg_id = ExpPTID_20260421114443_46369 
+[2026-04-21 11:44:45] [INFO] sts_id =  
+[2026-04-21 11:44:45] [INFO] Building PACS.002 response natively for PACS.008... 
+[2026-04-21 11:44:45] [INFO] PACS.002 Document successfully generated for OrgnlMsgId: ExpPTID_20260421114443_46369 
+[2026-04-21 11:44:47] [INFO] === Safely Extracted from PACS.008 === 
+[2026-04-21 11:44:47] [INFO] === Safely Extracted from PACS.008 === 
+[2026-04-21 11:44:47] [INFO] amount = 1.00 
+[2026-04-21 11:44:47] [INFO] amount = 1.00 
+[2026-04-21 11:44:47] [INFO] dbtr_bic = SAMBAEAD 
+[2026-04-21 11:44:47] [INFO] dbtr_bic = SAMBAEAD 
+[2026-04-21 11:44:47] [INFO] ctgy_purp_cd =  
+[2026-04-21 11:44:47] [INFO] svc_lvl_prtry =  
+[2026-04-21 11:44:47] [INFO] ctgy_purp_cd =  
+[2026-04-21 11:44:47] [INFO] sttlm_dt =  
+[2026-04-21 11:44:47] [INFO] svc_lvl_prtry =  
+[2026-04-21 11:44:47] [INFO] tx_id =  
+[2026-04-21 11:44:47] [INFO] sttlm_dt =  
+[2026-04-21 11:44:47] [INFO] nb_of_txs =  
+[2026-04-21 11:44:47] [INFO] tx_id =  
+[2026-04-21 11:44:47] [INFO] instr_id =  
+[2026-04-21 11:44:47] [INFO] nb_of_txs =  
+[2026-04-21 11:44:47] [INFO] ctgy_purp_prtry =  
+[2026-04-21 11:44:47] [INFO] instr_id =  
+[2026-04-21 11:44:47] [INFO] lcl_instrm_cd =  
+[2026-04-21 11:44:47] [INFO] ctgy_purp_prtry =  
+[2026-04-21 11:44:47] [INFO] cdtr_bic = LULUAEAD 
+[2026-04-21 11:44:47] [INFO] lcl_instrm_cd =  
+[2026-04-21 11:44:47] [INFO] clr_sys_ref =  
+[2026-04-21 11:44:47] [INFO] cdtr_bic = LULUAEAD 
+[2026-04-21 11:44:47] [INFO] end_to_end_id =  
+[2026-04-21 11:44:47] [INFO] clr_sys_ref =  
+[2026-04-21 11:44:47] [INFO] svc_lvl_cd =  
+[2026-04-21 11:44:47] [INFO] end_to_end_id =  
+[2026-04-21 11:44:47] [INFO] uetr =  
+[2026-04-21 11:44:47] [INFO] svc_lvl_cd =  
+[2026-04-21 11:44:47] [INFO] cre_dt_tm = 2026-04-21T11:44:47.386+04:00 
+[2026-04-21 11:44:47] [INFO] uetr =  
+[2026-04-21 11:44:47] [INFO] lcl_instrm_prtry = INST 
+[2026-04-21 11:44:47] [INFO] cre_dt_tm = 2026-04-21T11:44:47.380+04:00 
+[2026-04-21 11:44:47] [INFO] currency = AED 
+[2026-04-21 11:44:47] [INFO] lcl_instrm_prtry = INST 
+[2026-04-21 11:44:47] [INFO] msg_id = IPPCP0mo8bj7dm00 
+[2026-04-21 11:44:47] [INFO] currency = AED 
+[2026-04-21 11:44:47] [INFO] sts_id =  
+[2026-04-21 11:44:47] [INFO] msg_id = IPPCP0mo8bj7dg00 
+[2026-04-21 11:44:47] [INFO] Building PACS.002 response natively for PACS.008... 
+[2026-04-21 11:44:47] [INFO] sts_id =  
+[2026-04-21 11:44:47] [INFO] Building PACS.002 response natively for PACS.008... 
+[2026-04-21 11:44:47] [INFO] PACS.002 Document successfully generated for OrgnlMsgId: IPPCP0mo8bj7dm00 
+[2026-04-21 11:44:47] [INFO] PACS.002 Document successfully generated for OrgnlMsgId: IPPCP0mo8bj7dg00 
+[2026-04-21 11:44:47] [INFO] Ignored unsupported message type. 
+[2026-04-21 11:44:47] [INFO] Ignored unsupported message type. 
+[2026-04-21 11:44:49] [INFO] [PERFORMANCE] Processed 1 msgs in 5s. (TPS: 0.20) | Total: 92 | Errors: 0 
+[2026-04-21 11:44:49] [INFO] [PERFORMANCE] Processed 2 msgs in 5s. (TPS: 0.40) | Total: 3 | Errors: 0 
+[2026-04-21 11:46:15] [INFO] Ignored unsupported message type. 
+[2026-04-21 11:46:19] [INFO] === Safely Extracted from PACS.004 === 
+[2026-04-21 11:46:19] [INFO] amount =  
+[2026-04-21 11:46:19] [INFO] === Safely Extracted from PACS.004 === 
+[2026-04-21 11:46:19] [INFO] instd_bic = LULUAEAD 
+[2026-04-21 11:46:19] [INFO] amount =  
+[2026-04-21 11:46:19] [INFO] dbtr_bic = AEPCAEA0 
+[2026-04-21 11:46:19] [INFO] instd_bic = SAMBAEAD 
+[2026-04-21 11:46:19] [INFO] orgnl_end_to_end_id =  
+[2026-04-21 11:46:19] [INFO] dbtr_bic = AEPCAEA0 
+[2026-04-21 11:46:19] [INFO] orgnl_tx_id =  
+[2026-04-21 11:46:19] [INFO] orgnl_end_to_end_id =  
+[2026-04-21 11:46:19] [INFO] rtr_id =  
+[2026-04-21 11:46:19] [INFO] === Safely Extracted from PACS.004 === 
+[2026-04-21 11:46:19] [INFO] amount = 1.00 
+[2026-04-21 11:46:19] [INFO] instd_bic = SAMBAEAD 
+[2026-04-21 11:46:19] [INFO] orgnl_tx_id =  
+[2026-04-21 11:46:19] [INFO] tx_id =  
+[2026-04-21 11:46:19] [INFO] rtr_id =  
+[2026-04-21 11:46:19] [INFO] tx_id =  
+[2026-04-21 11:46:19] [INFO] nb_of_txs =  
+[2026-04-21 11:46:19] [INFO] nb_of_txs =  
+[2026-04-21 11:46:19] [INFO] orgnl_clr_sys_ref =  
+[2026-04-21 11:46:19] [INFO] orgnl_clr_sys_ref =  
+[2026-04-21 11:46:19] [INFO] orgnl_msg_id =  
+[2026-04-21 11:46:19] [INFO] cdtr_bic = LULUAEAD 
+[2026-04-21 11:46:19] [INFO] clr_sys_ref =  
+[2026-04-21 11:46:19] [INFO] instg_bic = AEPCAEA0 
+[2026-04-21 11:46:19] [INFO] dbtr_bic = AEPCAEA0 
+[2026-04-21 11:46:19] [INFO] orgnl_msg_id =  
+[2026-04-21 11:46:19] [INFO] orgnl_end_to_end_id = E2E_20260421114443_008_41448 
+[2026-04-21 11:46:19] [INFO] cdtr_bic = SAMBAEAD 
+[2026-04-21 11:46:19] [INFO] orgnl_tx_id = TxId_20260421114443_008_36911 
+[2026-04-21 11:46:19] [INFO] end_to_end_id =  
+[2026-04-21 11:46:19] [INFO] clr_sys_ref =  
+[2026-04-21 11:46:19] [INFO] instg_bic = AEPCAEA0 
+[2026-04-21 11:46:19] [INFO] rtr_id = RTR_PTID_20260421114619_0 
+[2026-04-21 11:46:19] [INFO] end_to_end_id =  
+[2026-04-21 11:46:19] [INFO] uetr =  
+[2026-04-21 11:46:19] [INFO] tx_id = TxId_20260421114443_008_36911 
+[2026-04-21 11:46:19] [INFO] cre_dt_tm = 2026-04-21T11:46:19.462+04:00 
+[2026-04-21 11:46:19] [INFO] uetr =  
+[2026-04-21 11:46:19] [INFO] cre_dt_tm = 2026-04-21T11:46:19.469+04:00 
+[2026-04-21 11:46:19] [INFO] orgnl_msg_nm_id =  
+[2026-04-21 11:46:19] [INFO] nb_of_txs = 1 
+[2026-04-21 11:46:19] [INFO] orgnl_msg_nm_id =  
+[2026-04-21 11:46:19] [INFO] msg_type = pacs.004 
+[2026-04-21 11:46:19] [INFO] msg_type = pacs.004 
+[2026-04-21 11:46:19] [INFO] orgnl_clr_sys_ref = INSTP0mo8bj5m300 
+[2026-04-21 11:46:19] [INFO] currency =  
+[2026-04-21 11:46:19] [INFO] currency =  
+[2026-04-21 11:46:19] [INFO] msg_id = IPPCP0mo8bl6fh00 
+[2026-04-21 11:46:19] [INFO] orgnl_uetr =  
+[2026-04-21 11:46:19] [INFO] Building PACS.002 response natively for PACS.004... 
+[2026-04-21 11:46:19] [INFO] orgnl_msg_id = ExpPTID_20260421114443_46369 
+[2026-04-21 11:46:19] [INFO] msg_id = IPPCP0mo8bl6fa00 
+[2026-04-21 11:46:19] [INFO] cdtr_bic = SAMBAEAD 
+[2026-04-21 11:46:19] [INFO] clr_sys_ref = INSTP0mo8bj5m300 
+[2026-04-21 11:46:19] [INFO] instg_bic = AEPCAEA0 
+[2026-04-21 11:46:19] [INFO] orgnl_uetr =  
+[2026-04-21 11:46:19] [INFO] Building PACS.002 response natively for PACS.004... 
+[2026-04-21 11:46:19] [INFO] PACS.002 Document successfully generated for OrgnlMsgId: IPPCP0mo8bl6fa00 
+[2026-04-21 11:46:19] [INFO] end_to_end_id = E2E_20260421114443_008_41448 
+[2026-04-21 11:46:19] [INFO] uetr = 86c09bda-9bb0-462e-8f6f-1981f409f834 
+[2026-04-21 11:46:19] [INFO] PACS.002 Document successfully generated for OrgnlMsgId: IPPCP0mo8bl6fh00 
+[2026-04-21 11:46:19] [INFO] cre_dt_tm = 2026-04-21T11:46:19.270+04:00 
+[2026-04-21 11:46:19] [INFO] orgnl_msg_nm_id = pacs.008 
+[2026-04-21 11:46:19] [INFO] msg_type = pacs.004 
+[2026-04-21 11:46:19] [INFO] currency = AED 
+[2026-04-21 11:46:19] [INFO] msg_id = RET_PTID_20260421114619_0 
+[2026-04-21 11:46:19] [INFO] orgnl_uetr = 86c09bda-9bb0-462e-8f6f-1981f409f834 
+[2026-04-21 11:46:19] [INFO] Building PACS.002 response natively for PACS.004... 
+[2026-04-21 11:46:19] [INFO] PACS.002 Document successfully generated for OrgnlMsgId: RET_PTID_20260421114619_0 
+[2026-04-21 11:46:19] [INFO] Ignored unsupported message type. 
+[2026-04-21 11:46:19] [INFO] Ignored unsupported message type. 
+[2026-04-21 11:46:19] [INFO] Ignored unsupported message type. 
+[2026-04-21 11:46:19] [INFO] [PERFORMANCE] Processed 1 msgs in 5s. (TPS: 0.20) | Total: 4 | Errors: 0 
+[2026-04-21 11:46:19] [INFO] [PERFORMANCE] Processed 2 msgs in 5s. (TPS: 0.40) | Total: 94 | Errors: 0 
+[2026-04-21 11:58:32] [INFO] Starting Expleo PT AMQ Simulator UI 
+[2026-04-21 11:58:36] [INFO] Connecting to Expleo PT AMQ at tcp://amq.uat.ipp.aletihadpayments.ae:443?sslEnabled=true&trustStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&trustStorePassword=password&keyStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&keyStorePassword=password&verifyHost=false... 
+[2026-04-21 11:58:36] [INFO] Connecting to Expleo PT AMQ at tcp://amq.uat.ipp.aletihadpayments.ae:443?sslEnabled=true&trustStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&trustStorePassword=password&keyStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&keyStorePassword=password&verifyHost=false... 
+[2026-04-21 11:58:36] [INFO] Connecting to Expleo PT AMQ at tcp://amq.uat.ipp.aletihadpayments.ae:443?sslEnabled=true&trustStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&trustStorePassword=password&keyStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&keyStorePassword=password&verifyHost=false... 
+[2026-04-21 11:58:38] [INFO] Connected successfully. Subscribed to UAEIPP.LULUAEAD.Out... 
+[2026-04-21 11:58:38] [INFO] Connected successfully. Subscribed to UAEIPP.E342XXXX.Out... 
+[2026-04-21 11:58:38] [INFO] Connected successfully. Subscribed to UAEIPP.SAMBAEAD.Out... 
+[2026-04-21 11:58:38] [INFO] Ignored unsupported message type. 
+[2026-04-21 11:58:38] [INFO] Ignored unsupported message type. 
+[2026-04-21 11:58:38] [INFO] Ignored unsupported message type. 
+[2026-04-21 11:58:38] [INFO] Ignored unsupported message type. 
+[2026-04-21 11:58:38] [INFO] === Safely Extracted from PACS.028 === 
+[2026-04-21 11:58:38] [INFO] orgnl_msg_id =  
+[2026-04-21 11:58:38] [INFO] dbtr_bic = AEPCAEA0 
+[2026-04-21 11:58:38] [INFO] cdtr_bic = SAMBAEAD 
+[2026-04-21 11:58:38] [INFO] end_to_end_id =  
+[2026-04-21 11:58:38] [INFO] uetr =  
+[2026-04-21 11:58:38] [INFO] cre_dt_tm = 2026-04-21T11:51:16.565+04:00 
+[2026-04-21 11:58:38] [INFO] orgnl_msg_nm_id =  
+[2026-04-21 11:58:38] [INFO] msg_type = pacs.028 
+[2026-04-21 11:58:38] [INFO] msg_id = IPPCF0mo8brjmi00 
+[2026-04-21 11:58:38] [INFO] tx_id =  
+[2026-04-21 11:58:38] [INFO] Building PACS.002 response natively for PACS.028... 
+[2026-04-21 11:58:38] [INFO] PACS.002 Document successfully generated for OrgnlMsgId: IPPCF0mo8brjmi00 
+[2026-04-21 11:58:39] [INFO] Response successfully sent to UAEIPP.SAMBAEAD.In 
+[2026-04-21 11:58:39] [INFO] Ignored unsupported message type. 
+[2026-04-21 11:59:00] [INFO] Response successfully sent to UAEIPP.LULUAEAD.In 
+[2026-04-21 12:00:24] [INFO] Shutting down AMQ Listener... 
+[2026-04-21 12:00:24] [INFO] Shutting down AMQ Listener... 
+[2026-04-21 12:00:24] [INFO] AMQ Listener stopped. 
+[2026-04-21 12:00:24] [INFO] AMQ Listener stopped. 
+[2026-04-21 12:00:24] [INFO] Shutting down AMQ Listener... 
+[2026-04-21 12:00:24] [INFO] AMQ Listener stopped. 
+[2026-04-21 12:00:24] [INFO] Shutting down AMQ Listener... 
+[2026-04-21 12:00:24] [INFO] AMQ Listener stopped. 
+[2026-04-21 12:00:25] [INFO] Shutting down AMQ Listener... 
+[2026-04-21 12:00:25] [INFO] Shutting down AMQ Listener... 
+[2026-04-21 12:00:25] [INFO] AMQ Listener stopped. 
+[2026-04-21 12:00:25] [INFO] AMQ Listener stopped. 
+[2026-04-21 13:55:25] [INFO] Starting Expleo PT AMQ Simulator UI 
+[2026-04-21 13:55:35] [INFO] Connecting to Expleo PT AMQ at tcp://amq.uat.ipp.aletihadpayments.ae:443?sslEnabled=true&trustStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&trustStorePassword=password&keyStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&keyStorePassword=password&verifyHost=false... 
+[2026-04-21 13:55:36] [INFO] Connected successfully. Subscribed to UAEIPP.SAMBAEAD.Out... 
+[2026-04-21 13:55:36] [INFO] High-Performance Mode ACTIVE. Disk logging is bypassed. 
+[2026-04-21 13:55:41] [INFO] [PERFORMANCE] Processed 14 msgs in 5s. (TPS: 2.80) | Total: 14 | Errors: 0 
+[2026-04-21 13:56:31] [INFO] Shutting down AMQ Listener... 
+[2026-04-21 13:56:31] [INFO] AMQ Listener stopped. 
+[2026-04-21 13:56:44] [INFO] Starting Expleo PT AMQ Simulator UI 
+[2026-04-21 13:56:47] [INFO] Connecting to Expleo PT AMQ at tcp://amq.uat.ipp.aletihadpayments.ae:443?sslEnabled=true&trustStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&trustStorePassword=password&keyStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&keyStorePassword=password&verifyHost=false... 
+[2026-04-21 13:56:48] [INFO] Connected successfully. Subscribed to UAEIPP.E342XXXX.Out... 
+[2026-04-21 13:56:48] [INFO] High-Performance Mode ACTIVE. Disk logging is bypassed. 
+[2026-04-21 13:56:53] [INFO] [PERFORMANCE] Processed 1 msgs in 5s. (TPS: 0.20) | Total: 1 | Errors: 0 
+[2026-04-21 13:56:58] [INFO] [PERFORMANCE] Processed 1 msgs in 5s. (TPS: 0.20) | Total: 2 | Errors: 0 
+[2026-04-21 13:57:03] [INFO] [PERFORMANCE] Processed 1 msgs in 5s. (TPS: 0.20) | Total: 3 | Errors: 0 
+[2026-04-21 14:00:09] [INFO] Starting Expleo PT AMQ Simulator UI 
+[2026-04-21 14:01:20] [INFO] Connecting to Expleo PT AMQ at tcp://amq.uat.ipp.aletihadpayments.ae:443?sslEnabled=true&trustStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&trustStorePassword=password&keyStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&keyStorePassword=password&verifyHost=false... 
+[2026-04-21 14:01:20] [INFO] Connecting to Expleo PT AMQ at tcp://amq.uat.ipp.aletihadpayments.ae:443?sslEnabled=true&trustStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&trustStorePassword=password&keyStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&keyStorePassword=password&verifyHost=false... 
+[2026-04-21 14:01:21] [INFO] Connected successfully. Subscribed to UAEIPP.E342XXXX.Out... 
+[2026-04-21 14:01:21] [INFO] Connected successfully. Subscribed to UAEIPP.SAMBAEAD.Out... 
+[2026-04-21 14:01:21] [INFO] High-Performance Mode ACTIVE. Disk logging is bypassed. 
+[2026-04-21 14:01:21] [INFO] High-Performance Mode ACTIVE. Disk logging is bypassed. 
+[2026-04-21 14:01:26] [INFO] [PERFORMANCE] Processed 13 msgs in 5s. (TPS: 2.60) | Total: 13 | Errors: 0 
+[2026-04-21 14:08:01] [INFO] Shutting down AMQ Listener... 
+[2026-04-21 14:08:01] [INFO] AMQ Listener stopped. 
+[2026-04-21 14:08:01] [INFO] Shutting down AMQ Listener... 
+[2026-04-21 14:08:01] [INFO] AMQ Listener stopped. 
+[2026-04-21 14:08:02] [INFO] Shutting down AMQ Listener... 
+[2026-04-21 14:08:02] [INFO] Shutting down AMQ Listener... 
+[2026-04-21 14:08:02] [INFO] AMQ Listener stopped. 
+[2026-04-21 14:08:02] [INFO] AMQ Listener stopped. 
+[2026-04-21 14:08:03] [INFO] Connecting to Expleo PT AMQ at tcp://amq.uat.ipp.aletihadpayments.ae:443?sslEnabled=true&trustStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&trustStorePassword=password&keyStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&keyStorePassword=password&verifyHost=false... 
+[2026-04-21 14:08:03] [INFO] Connecting to Expleo PT AMQ at tcp://amq.uat.ipp.aletihadpayments.ae:443?sslEnabled=true&trustStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&trustStorePassword=password&keyStorePath=C:/Software/apache-artemis-2.53.0/bin/broker.ks&keyStorePassword=password&verifyHost=false... 
+[2026-04-21 14:08:04] [INFO] Connected successfully. Subscribed to UAEIPP.E342XXXX.Out... 
+[2026-04-21 14:08:04] [INFO] High-Performance Mode ACTIVE. Disk logging is bypassed. 
+[2026-04-21 14:08:04] [INFO] Connected successfully. Subscribed to UAEIPP.SAMBAEAD.Out... 
+[2026-04-21 14:08:04] [INFO] High-Performance Mode ACTIVE. Disk logging is bypassed. 
+[2026-04-21 14:08:09] [INFO] [PERFORMANCE] Processed 3 msgs in 5s. (TPS: 0.60) | Total: 3 | Errors: 0 
+[2026-04-21 14:08:12] [INFO] Shutting down AMQ Listener... 
+[2026-04-21 14:08:12] [INFO] AMQ Listener stopped. 
+[2026-04-21 14:08:12] [INFO] Shutting down AMQ Listener... 
+[2026-04-21 14:08:12] [INFO] AMQ Listener stopped. 
+[2026-04-21 14:08:13] [INFO] Shutting down AMQ Listener... 
+[2026-04-21 14:08:13] [INFO] Shutting down AMQ Listener... 
+[2026-04-21 14:08:13] [INFO] AMQ Listener stopped. 
+[2026-04-21 14:08:13] [INFO] AMQ Listener stopped. 
+[2026-04-21 14:32:11] [INFO] Starting Expleo PT AMQ Simulator UI 
+[2026-04-21 14:34:20] [INFO] Starting Expleo PT AMQ Simulator UI 
+[2026-04-21 14:35:05] [INFO] Starting Expleo PT AMQ Simulator UI 
+[2026-05-14 10:12:08] [INFO] Starting Expleo PT AMQ Simulator UI 
+[2026-09-08 10:51:18] [INFO] Starting Expleo PT AMQ Simulator UI 
+[2026-09-15 13:03:03] [INFO] Starting Expleo PT AMQ Simulator UI 

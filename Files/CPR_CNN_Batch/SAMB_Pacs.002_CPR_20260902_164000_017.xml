@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:cpr.pacs.002.001.11">
+    <FIToFIPmtStsRpt>
+
+        <GrpHdr>
+            <MsgId>SAMB20260902164000CPR017</MsgId>
+            <CreDtTm>2026-09-02T16:40:00.000+04:00</CreDtTm>
+            <InstgAgt>
+                <FinInstnId>
+                    <BICFI>SAMBAEAD</BICFI>
+                </FinInstnId>
+            </InstgAgt>
+            <InstdAgt>
+                <FinInstnId>
+                    <BICFI>AEPCAEA0</BICFI>
+                </FinInstnId>
+            </InstdAgt>
+        </GrpHdr>
+        <OrgnlGrpInfAndSts>
+            <OrgnlMsgId>SAMB20260902164000CPR017</OrgnlMsgId>
+            <OrgnlMsgNmId>EOD CPR</OrgnlMsgNmId>
+            <OrgnlNbOfTxs>1</OrgnlNbOfTxs>
+            <OrgnlCtrlSum>100.00</OrgnlCtrlSum>
+        </OrgnlGrpInfAndSts>
+        <TxInfAndSts>
+            <StsId>CPRSTS000001</StsId>
+            <OrgnlEndToEndId>U3ATE2E323643450938985</OrgnlEndToEndId>
+            <OrgnlTxId>UAT20986716312287110</OrgnlTxId>
+            <OrgnlUETR>df6e3757-cb9e-410b-9a0a-1af88247a413</OrgnlUETR>
+            <TxSts>ACCC</TxSts>
+            <StsRsnInf>
+                <Rsn>
+                    <Prtry>ACCC2026-08-09T10:05:45.000+04:00</Prtry>
+                </Rsn>
+            </StsRsnInf>
+            <AccptncDtTm>2026-08-09T10:04:45.000+04:00</AccptncDtTm>
+            <OrgnlTxRef>
+                <IntrBkSttlmAmt Ccy="AED">100.00</IntrBkSttlmAmt>
+                <IntrBkSttlmDt>2026-08-09</IntrBkSttlmDt>
+                <DbtrAgt>
+                    <FinInstnId>
+                        <BICFI>DEUTAEAA</BICFI>
+                    </FinInstnId>
+                </DbtrAgt>
+                <CdtrAgt>
+                    <FinInstnId>
+                        <BICFI>SAMBAEAD</BICFI>
+                    </FinInstnId>
+                </CdtrAgt>
+                <Cdtr>
+                    <Pty>
+                        <Nm>Salman Khan</Nm>
+                        <Id>
+                            <PrvtId>
+                                <DtAndPlcOfBirth>
+                                    <BirthDt>1971-02-02</BirthDt>
+                                    <CityOfBirth>Abu Dhabi</CityOfBirth>
+                                    <CtryOfBirth>AE</CtryOfBirth>
+                                </DtAndPlcOfBirth>
+                                <Othr>
+                                    <Id>N9449406-0101</Id>
+                                    <SchmeNm>
+                                        <Cd>CCPT</Cd>
+                                    </SchmeNm>
+                                    <Issr>AE</Issr>
+                                </Othr>
+                            </PrvtId>
+                        </Id>
+                    </Pty>
+                </Cdtr>
+				<CdtrAcct>
+				<Id>
+					<IBAN>AE390260000825184296632</IBAN>
+				</Id>
+				<Tp>
+					<Cd>CACC</Cd>
+				</Tp>
+			</CdtrAcct>
+            </OrgnlTxRef>
+        </TxInfAndSts>
+		        
+    </FIToFIPmtStsRpt>
+</Document>
