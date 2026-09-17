@@ -32,6 +32,7 @@ public class SimulatorControlUI extends JFrame {
     private JComboBox<String> responseBox;
     private JCheckBox perfModeCheck;
     private JCheckBox enableStsCheck;
+    private JTextField cprLimitField;
 
     private JButton btnStart;
     private JButton btnStop;
@@ -183,6 +184,28 @@ public class SimulatorControlUI extends JFrame {
         mainPanel.add(optionsPanel);
         mainPanel.add(Box.createVerticalStrut(15));
 
+        // Batch Options Panel (CPR Limit)
+        JPanel batchPanel = new JPanel(new FlowLayout(FlowLayout.LEFT, 15, 8));
+        batchPanel.setBackground(panelColor);
+        batchPanel.setBorder(BorderFactory.createTitledBorder(
+                BorderFactory.createLineBorder(new Color(224, 224, 224)),
+                "Batch Limit (CPR)", TitledBorder.LEFT, TitledBorder.TOP,
+                new Font("Segoe UI", Font.BOLD, 12), accentColor));
+
+        batchPanel.add(new JLabel("CPR Batch Limit:"));
+        cprLimitField = new JTextField(String.valueOf(Config.getInt("cpr_batch_limit", 1000)), 6);
+        cprLimitField.addActionListener(e -> updateBatchLimits());
+        batchPanel.add(cprLimitField);
+
+        JButton btnApplyBatch = new JButton("Apply Limit");
+        btnApplyBatch.setFont(new Font("Segoe UI", Font.BOLD, 11));
+        btnApplyBatch.addActionListener(e -> updateBatchLimits());
+        batchPanel.add(Box.createHorizontalStrut(15));
+        batchPanel.add(btnApplyBatch);
+
+        mainPanel.add(batchPanel);
+        mainPanel.add(Box.createVerticalStrut(15));
+
         // Action Buttons
         JPanel actionPanel = new JPanel(new FlowLayout(FlowLayout.LEFT));
         actionPanel.setBackground(bgColor);
@@ -279,6 +302,20 @@ public class SimulatorControlUI extends JFrame {
         panel.add(inputPanel, gbc);
     }
 
+    private void updateBatchLimits() {
+        try {
+            int cpr = Integer.parseInt(cprLimitField.getText().trim());
+            if (cpr <= 0) {
+                throw new NumberFormatException("Limit must be a positive integer");
+            }
+            Config.set("cpr_batch_limit", cpr);
+            Config.saveConfig();
+            appendLog("Config Update: CPR Batch Limit set to " + cpr);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Batch limit must be a valid positive integer.", "Invalid Input", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
     private void saveConfig() {
         JSONObject mq = Config.getJSONObject("mq_config");
         mq.put("host", hostField.getText());
@@ -291,6 +328,7 @@ public class SimulatorControlUI extends JFrame {
         mq.put("trust_store_pass", new String(tsPassField.getPassword()));
 
         Config.set("mq_config", mq);
+        updateBatchLimits();
         Config.saveConfig();
 
         appendLog("Note: Restart server to apply MQ changes.");
@@ -353,6 +391,7 @@ public class SimulatorControlUI extends JFrame {
         }
         workers.clear();
         workerThreads.clear();
+        CprBatchProcessor.flushRemaining(LoggerHelper.getLogger("UI"));
         statusLabel.setText("● STOPPED");
         statusLabel.setForeground(dangerColor);
         btnStart.setEnabled(true);

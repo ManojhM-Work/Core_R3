@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
 public class JmsListenerWorker implements Runnable, MessageListener {
 
     private final Logger logger;
-    private final ExecutorService executor;
+    private ExecutorService executor;
     private Connection connection;
     private Session session;
     private Session producerSession;
@@ -69,6 +69,10 @@ public class JmsListenerWorker implements Runnable, MessageListener {
     }
 
     public void startConnections() throws JMSException {
+        if (executor == null || executor.isShutdown()) {
+            executor = Executors.newFixedThreadPool(100);
+        }
+
         String host = Config.getJSONObject("mq_config").optString("host", "localhost");
         String port = Config.getJSONObject("mq_config").optString("port", "61616");
         String user = Config.getJSONObject("mq_config").optString("username", "master");
@@ -126,7 +130,6 @@ public class JmsListenerWorker implements Runnable, MessageListener {
     public void stopConnections() {
         isRunning = false;
         log("Shutting down AMQ Listener...");
-        executor.shutdown();
         try {
             if (consumer != null)
                 consumer.close();
@@ -140,11 +143,20 @@ public class JmsListenerWorker implements Runnable, MessageListener {
                 connection.close();
         } catch (Exception ignored) {
         }
+
+        if (executor != null && !executor.isShutdown()) {
+            executor.shutdown();
+        }
+
         log("AMQ Listener stopped.");
     }
 
     @Override
     public void onMessage(Message message) {
+        if (!isRunning || executor == null || executor.isShutdown()) {
+            return;
+        }
+
         if (message instanceof TextMessage) {
             try {
                 // Must extract synchronously before passing to executor
@@ -156,7 +168,13 @@ public class JmsListenerWorker implements Runnable, MessageListener {
                 }
                 final String fCorrId = correlationId;
 
+                if (!isRunning || executor.isShutdown()) {
+                    return;
+                }
+
                 executor.submit(() -> processAsync(xmlStr, fCorrId, message));
+            } catch (java.util.concurrent.RejectedExecutionException ignored) {
+                // Ignore submission attempt when executor is shutting down
             } catch (Exception e) {
                 log("Error parsing incoming message synchronously: " + e.getMessage(), true);
             }

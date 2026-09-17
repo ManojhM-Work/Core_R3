@@ -64,6 +64,15 @@ public class Config {
         return defaultValue;
     }
 
+    public static int getInt(String key, int defaultValue) {
+        if (configData.has(key)) {
+            try {
+                return configData.getInt(key);
+            } catch (Exception ignored) {}
+        }
+        return defaultValue;
+    }
+
     public static void set(String key, Object value) {
         configData.put(key, value);
     }

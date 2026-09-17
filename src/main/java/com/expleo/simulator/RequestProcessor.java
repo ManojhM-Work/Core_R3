@@ -101,6 +101,20 @@ public class RequestProcessor {
             data.put("instd_bic", getSafeXPathText(doc, xpath,
                     "//*[local-name()='GrpHdr']/*[local-name()='InstdAgt']/*[local-name()='FinInstnId']/*[local-name()='BICFI']"));
 
+            data.put("cdtr_nm", getSafeXPathText(doc, xpath, "//*[local-name()='Cdtr']//*[local-name()='Nm']"));
+            data.put("cdtr_iban", getSafeXPathText(doc, xpath, "//*[local-name()='CdtrAcct']/*[local-name()='Id']/*[local-name()='IBAN']"));
+            data.put("cdtr_acct_tp", getSafeXPathText(doc, xpath, "//*[local-name()='CdtrAcct']/*[local-name()='Tp']/*[local-name()='Cd']"));
+            data.put("cdtr_org_id", getSafeXPathText(doc, xpath, "//*[local-name()='Cdtr']//*[local-name()='OrgId']//*[local-name()='Othr']/*[local-name()='Id']"));
+            data.put("cdtr_org_schme", getSafeXPathText(doc, xpath, "//*[local-name()='Cdtr']//*[local-name()='OrgId']//*[local-name()='Othr']/*[local-name()='SchmeNm']/*[local-name()='Cd']"));
+            data.put("cdtr_org_issr", getSafeXPathText(doc, xpath, "//*[local-name()='Cdtr']//*[local-name()='OrgId']//*[local-name()='Othr']/*[local-name()='Issr']"));
+            data.put("cdtr_prvt_birth_dt", getSafeXPathText(doc, xpath, "//*[local-name()='Cdtr']//*[local-name()='PrvtId']//*[local-name()='BirthDt']"));
+            data.put("cdtr_prvt_city", getSafeXPathText(doc, xpath, "//*[local-name()='Cdtr']//*[local-name()='PrvtId']//*[local-name()='CityOfBirth']"));
+            data.put("cdtr_prvt_ctry", getSafeXPathText(doc, xpath, "//*[local-name()='Cdtr']//*[local-name()='PrvtId']//*[local-name()='CtryOfBirth']"));
+            data.put("cdtr_prvt_id", getSafeXPathText(doc, xpath, "//*[local-name()='Cdtr']//*[local-name()='PrvtId']//*[local-name()='Othr']/*[local-name()='Id']"));
+            data.put("cdtr_prvt_schme", getSafeXPathText(doc, xpath, "//*[local-name()='Cdtr']//*[local-name()='PrvtId']//*[local-name()='Othr']/*[local-name()='SchmeNm']/*[local-name()='Cd']"));
+            data.put("cdtr_prvt_issr", getSafeXPathText(doc, xpath, "//*[local-name()='Cdtr']//*[local-name()='PrvtId']//*[local-name()='Othr']/*[local-name()='Issr']"));
+
+
             if (!isPerf) {
                 logger.info("=== Safely Extracted from PACS.008 ===");
                 for (Map.Entry<String, String> entry : data.entrySet()) {
@@ -351,6 +365,8 @@ public class RequestProcessor {
                 extracted.put("tx_sts", txSts);
 
                 sendToStsServer(extracted, logger);
+
+                CprBatchProcessor.addPacs008Transaction(extracted, logger);
 
                 if (!isPerf)
                     logger.info("Building PACS.002 response natively for PACS.008...");

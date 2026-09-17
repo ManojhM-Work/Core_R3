@@ -1,7 +1,9 @@
+com\expleo\simulator\CprBatchProcessor.class
 com\expleo\simulator\JmsListenerWorker.class
 com\expleo\simulator\RequestProcessor.class
 com\expleo\simulator\ResponseCreator.class
 com\expleo\simulator\Config.class
+com\expleo\simulator\JmsListenerWorker$1.class
 com\expleo\simulator\LoggerHelper$1.class
 com\expleo\simulator\SimulatorControlUI$1.class
 com\expleo\simulator\LoggerHelper.class

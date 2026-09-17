@@ -51,11 +51,12 @@ public class ResponseCreator {
             Element grpHdr = doc.createElementNS(ns, "GrpHdr");
             report.appendChild(grpHdr);
 
-//            Element msgId = doc.createElementNS(ns, "MsgId");
-//            msgId.setTextContent(uuid30());
-//            grpHdr.appendChild(msgId);
+            // Element msgId = doc.createElementNS(ns, "MsgId");
+            // msgId.setTextContent(uuid30());
+            // grpHdr.appendChild(msgId);
             Element msgId = doc.createElementNS(ns, "MsgId");
-//            String ts = processingTime.format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
+            // String ts =
+            // processingTime.format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
             String ts = processingTime.format(DateTimeFormatter.ofPattern("yyyyMMddHHmmssSSS"));
             String randomId = String.valueOf((int) (Math.random() * 90000) + 10000);
             msgId.setTextContent("PT_R82_" + ts + "_" + randomId);
@@ -294,7 +295,8 @@ public class ResponseCreator {
 
             // MsgId Pattern: Athi_RET_yyyyMMddHHmmss_RANDOM
             Element msgId = doc.createElementNS(ns, "MsgId");
-//            String ts = processingTime.format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
+            // String ts =
+            // processingTime.format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
             String ts = processingTime.format(DateTimeFormatter.ofPattern("yyyyMMddHHmmSSSS"));
             String randomId = String.valueOf((int) (Math.random() * 90000) + 10000);
             msgId.setTextContent("PT_RET" + ts + "_" + randomId);
@@ -442,6 +444,315 @@ public class ResponseCreator {
         } catch (Exception e) {
             if (logger != null)
                 logger.severe("Error building pacs.004: " + e.getMessage());
+            return "";
+        }
+    }
+
+    public static String buildCprPacs002Batch(java.util.List<Map<String, String>> batchData, int sequenceNum,
+            LocalDateTime processingTime, Logger logger) {
+        return buildBatchPacs002(batchData, "CPR", sequenceNum, processingTime, logger);
+    }
+
+    public static String buildBatchPacs002(java.util.List<Map<String, String>> batchData, String reportType,
+            int sequenceNum, LocalDateTime processingTime, Logger logger) {
+        if (processingTime == null) {
+            processingTime = LocalDateTime.now(ZoneOffset.ofHours(4));
+        }
+
+        if (reportType == null || reportType.trim().isEmpty()) {
+            reportType = "CPR";
+        } else {
+            reportType = reportType.toUpperCase().trim();
+        }
+
+        try {
+            DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+            docFactory.setNamespaceAware(true);
+            DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+            Document doc = docBuilder.newDocument();
+
+            String ns = "urn:iso:std:iso:20022:tech:xsd:cpr.pacs.002.001.11";
+
+            Element document = doc.createElementNS(ns, "Document");
+            doc.appendChild(document);
+
+            Element report = doc.createElementNS(ns, "FIToFIPmtStsRpt");
+            document.appendChild(report);
+
+            Element grpHdr = doc.createElementNS(ns, "GrpHdr");
+            report.appendChild(grpHdr);
+
+            String dateStr = processingTime.format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
+            String seqStr = String.format("%03d", sequenceNum);
+            String msgIdVal = "SAMB" + dateStr + reportType + seqStr;
+
+            Element msgId = doc.createElementNS(ns, "MsgId");
+            msgId.setTextContent(msgIdVal);
+            grpHdr.appendChild(msgId);
+
+            Element creDtTm = doc.createElementNS(ns, "CreDtTm");
+            creDtTm.setTextContent(
+                    processingTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS+04:00")));
+            grpHdr.appendChild(creDtTm);
+
+            String instgBicVal = "SAMBAEAD";
+            if (!batchData.isEmpty()) {
+                String val = batchData.get(0).get("instg_bic");
+                if (val != null && !val.isEmpty()) {
+                    instgBicVal = val;
+                }
+            }
+
+            Element instg = doc.createElementNS(ns, "InstgAgt");
+            Element instg_fin = doc.createElementNS(ns, "FinInstnId");
+            Element instg_bic = doc.createElementNS(ns, "BICFI");
+            instg_bic.setTextContent(instgBicVal);
+            instg_fin.appendChild(instg_bic);
+            instg.appendChild(instg_fin);
+            grpHdr.appendChild(instg);
+
+            Element instd = doc.createElementNS(ns, "InstdAgt");
+            Element instd_fin = doc.createElementNS(ns, "FinInstnId");
+            Element instd_bic = doc.createElementNS(ns, "BICFI");
+            instd_bic.setTextContent("AEPCAEA0");
+            instd_fin.appendChild(instd_bic);
+            instd.appendChild(instd_fin);
+            grpHdr.appendChild(instd);
+
+            // Group Info
+            Element org = doc.createElementNS(ns, "OrgnlGrpInfAndSts");
+            report.appendChild(org);
+
+            Element orgnlMsgId = doc.createElementNS(ns, "OrgnlMsgId");
+            orgnlMsgId.setTextContent(msgIdVal);
+            org.appendChild(orgnlMsgId);
+
+            Element orgnlMsgNmId = doc.createElementNS(ns, "OrgnlMsgNmId");
+            orgnlMsgNmId.setTextContent("EOD " + reportType);
+            org.appendChild(orgnlMsgNmId);
+
+            Element orgnlNbOfTxs = doc.createElementNS(ns, "OrgnlNbOfTxs");
+            orgnlNbOfTxs.setTextContent(String.valueOf(batchData.size()));
+            org.appendChild(orgnlNbOfTxs);
+
+            double totalSum = 0.0;
+            for (Map<String, String> item : batchData) {
+                try {
+                    String amtStr = item.get("amount");
+                    if (amtStr != null && !amtStr.isEmpty()) {
+                        totalSum += Double.parseDouble(amtStr);
+                    }
+                } catch (Exception ignored) {
+                }
+            }
+
+            Element orgnlCtrlSum = doc.createElementNS(ns, "OrgnlCtrlSum");
+            orgnlCtrlSum.setTextContent(String.format(java.util.Locale.US, "%.2f", totalSum));
+            org.appendChild(orgnlCtrlSum);
+
+            for (Map<String, String> data : batchData) {
+                Element tx = doc.createElementNS(ns, "TxInfAndSts");
+                report.appendChild(tx);
+
+                String msg_type = getOr(data, "msg_type", "pacs.008");
+                Element stsId = doc.createElementNS(ns, "StsId");
+                if (msg_type.equals("pacs.008") || msg_type.equals("pacs.007") || msg_type.equals("pacs.003")) {
+                    String clrSysRef = getOr(data, "clr_sys_ref", "");
+                    if (!clrSysRef.isEmpty()) {
+                        stsId.setTextContent(clrSysRef);
+                    } else {
+                        stsId.setTextContent(getOr(data, "msg_id", ""));
+                    }
+                } else {
+                    String sid = getOr(data, "sts_id", "");
+                    stsId.setTextContent(sid.isEmpty() ? uuid30() : sid);
+                }
+                tx.appendChild(stsId);
+
+                Element orgEndToEnd = doc.createElementNS(ns, "OrgnlEndToEndId");
+                orgEndToEnd.setTextContent(getOr(data, "end_to_end_id", ""));
+                tx.appendChild(orgEndToEnd);
+
+                Element orgTxId = doc.createElementNS(ns, "OrgnlTxId");
+                orgTxId.setTextContent(getOr(data, "tx_id", ""));
+                tx.appendChild(orgTxId);
+
+                Element orgUETR = doc.createElementNS(ns, "OrgnlUETR");
+                orgUETR.setTextContent(getOr(data, "uetr", ""));
+                tx.appendChild(orgUETR);
+
+                String tx_sts = getOr(data, "tx_sts", "ACCC");
+                Element txStsEl = doc.createElementNS(ns, "TxSts");
+                txStsEl.setTextContent(tx_sts);
+                tx.appendChild(txStsEl);
+
+                Element stsRsnInf = doc.createElementNS(ns, "StsRsnInf");
+                Element rsn = doc.createElementNS(ns, "Rsn");
+                Element prtry = doc.createElementNS(ns, "Prtry");
+                prtry.setTextContent(
+                        tx_sts + processingTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS+04:00")));
+                rsn.appendChild(prtry);
+                stsRsnInf.appendChild(rsn);
+                tx.appendChild(stsRsnInf);
+
+                Element accptncDtTm = doc.createElementNS(ns, "AccptncDtTm");
+                accptncDtTm.setTextContent(
+                        processingTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS+04:00")));
+                tx.appendChild(accptncDtTm);
+
+                Element orgRef = doc.createElementNS(ns, "OrgnlTxRef");
+                tx.appendChild(orgRef);
+
+                String currency = getOr(data, "currency", "AED");
+                String amount = getOr(data, "amount", "0.00");
+                try {
+                    double amtVal = Double.parseDouble(amount);
+                    amount = String.format(java.util.Locale.US, "%.2f", amtVal);
+                } catch (Exception ignored) {
+                }
+
+                Element intrBkAmt = doc.createElementNS(ns, "IntrBkSttlmAmt");
+                intrBkAmt.setAttribute("Ccy", currency);
+                intrBkAmt.setTextContent(amount);
+                orgRef.appendChild(intrBkAmt);
+
+                String sttlm_dt = getOr(data, "sttlm_dt",
+                        processingTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
+                Element sttlmDtEl = doc.createElementNS(ns, "IntrBkSttlmDt");
+                sttlmDtEl.setTextContent(sttlm_dt);
+                orgRef.appendChild(sttlmDtEl);
+
+                Element dbtrAgt = doc.createElementNS(ns, "DbtrAgt");
+                Element dbtrFin = doc.createElementNS(ns, "FinInstnId");
+                Element dbtrBic = doc.createElementNS(ns, "BICFI");
+                dbtrBic.setTextContent(getOr(data, "dbtr_bic", "NA"));
+                dbtrFin.appendChild(dbtrBic);
+                dbtrAgt.appendChild(dbtrFin);
+                orgRef.appendChild(dbtrAgt);
+
+                Element cdtrAgt = doc.createElementNS(ns, "CdtrAgt");
+                Element cdtrFin = doc.createElementNS(ns, "FinInstnId");
+                Element cdtrBic = doc.createElementNS(ns, "BICFI");
+                cdtrBic.setTextContent(getOr(data, "cdtr_bic", "NA"));
+                cdtrFin.appendChild(cdtrBic);
+                cdtrAgt.appendChild(cdtrFin);
+                orgRef.appendChild(cdtrAgt);
+
+                // Optional Cdtr
+                String cdtrNm = data.get("cdtr_nm");
+                if (cdtrNm != null && !cdtrNm.isEmpty()) {
+                    Element cdtr = doc.createElementNS(ns, "Cdtr");
+                    Element pty = doc.createElementNS(ns, "Pty");
+                    Element nm = doc.createElementNS(ns, "Nm");
+                    nm.setTextContent(cdtrNm);
+                    pty.appendChild(nm);
+
+                    String orgId = data.get("cdtr_org_id");
+                    String prvtId = data.get("cdtr_prvt_id");
+                    if (orgId != null && !orgId.isEmpty()) {
+                        Element idEl = doc.createElementNS(ns, "Id");
+                        Element orgIdEl = doc.createElementNS(ns, "OrgId");
+                        Element othr = doc.createElementNS(ns, "Othr");
+                        Element othrId = doc.createElementNS(ns, "Id");
+                        othrId.setTextContent(orgId);
+                        othr.appendChild(othrId);
+
+                        String schme = data.get("cdtr_org_schme");
+                        if (schme != null && !schme.isEmpty()) {
+                            Element sEl = doc.createElementNS(ns, "SchmeNm");
+                            Element cdEl = doc.createElementNS(ns, "Cd");
+                            cdEl.setTextContent(schme);
+                            sEl.appendChild(cdEl);
+                            othr.appendChild(sEl);
+                        }
+                        String issr = data.get("cdtr_org_issr");
+                        if (issr != null && !issr.isEmpty()) {
+                            Element issrEl = doc.createElementNS(ns, "Issr");
+                            issrEl.setTextContent(issr);
+                            othr.appendChild(issrEl);
+                        }
+                        orgIdEl.appendChild(othr);
+                        idEl.appendChild(orgIdEl);
+                        pty.appendChild(idEl);
+                    } else if (prvtId != null && !prvtId.isEmpty()) {
+                        Element idEl = doc.createElementNS(ns, "Id");
+                        Element prvtIdEl = doc.createElementNS(ns, "PrvtId");
+                        String birthDt = data.get("cdtr_prvt_birth_dt");
+                        if (birthDt != null && !birthDt.isEmpty()) {
+                            Element dtPlc = doc.createElementNS(ns, "DtAndPlcOfBirth");
+                            Element bDt = doc.createElementNS(ns, "BirthDt");
+                            bDt.setTextContent(birthDt);
+                            dtPlc.appendChild(bDt);
+                            String city = data.get("cdtr_prvt_city");
+                            if (city != null && !city.isEmpty()) {
+                                Element cEl = doc.createElementNS(ns, "CityOfBirth");
+                                cEl.setTextContent(city);
+                                dtPlc.appendChild(cEl);
+                            }
+                            String ctry = data.get("cdtr_prvt_ctry");
+                            if (ctry != null && !ctry.isEmpty()) {
+                                Element ctEl = doc.createElementNS(ns, "CtryOfBirth");
+                                ctEl.setTextContent(ctry);
+                                dtPlc.appendChild(ctEl);
+                            }
+                            prvtIdEl.appendChild(dtPlc);
+                        }
+                        Element othr = doc.createElementNS(ns, "Othr");
+                        Element othrId = doc.createElementNS(ns, "Id");
+                        othrId.setTextContent(prvtId);
+                        othr.appendChild(othrId);
+                        String schme = data.get("cdtr_prvt_schme");
+                        if (schme != null && !schme.isEmpty()) {
+                            Element sEl = doc.createElementNS(ns, "SchmeNm");
+                            Element cdEl = doc.createElementNS(ns, "Cd");
+                            cdEl.setTextContent(schme);
+                            sEl.appendChild(cdEl);
+                            othr.appendChild(sEl);
+                        }
+                        String issr = data.get("cdtr_prvt_issr");
+                        if (issr != null && !issr.isEmpty()) {
+                            Element issrEl = doc.createElementNS(ns, "Issr");
+                            issrEl.setTextContent(issr);
+                            othr.appendChild(issrEl);
+                        }
+                        prvtIdEl.appendChild(othr);
+                        idEl.appendChild(prvtIdEl);
+                        pty.appendChild(idEl);
+                    }
+                    cdtr.appendChild(pty);
+                    orgRef.appendChild(cdtr);
+                }
+
+                // Optional CdtrAcct
+                String iban = data.get("cdtr_iban");
+                if (iban != null && !iban.isEmpty()) {
+                    Element cdtrAcct = doc.createElementNS(ns, "CdtrAcct");
+                    Element idEl = doc.createElementNS(ns, "Id");
+                    Element ibanEl = doc.createElementNS(ns, "IBAN");
+                    ibanEl.setTextContent(iban);
+                    idEl.appendChild(ibanEl);
+                    cdtrAcct.appendChild(idEl);
+
+                    Element tpEl = doc.createElementNS(ns, "Tp");
+                    Element cdEl = doc.createElementNS(ns, "Cd");
+                    cdEl.setTextContent(getOr(data, "cdtr_acct_tp", "CACC"));
+                    tpEl.appendChild(cdEl);
+                    cdtrAcct.appendChild(tpEl);
+
+                    orgRef.appendChild(cdtrAcct);
+                }
+            }
+
+            if (logger != null) {
+                logger.info("CPR PACS.002 Batch Document successfully generated with " + batchData.size()
+                        + " transactions.");
+            }
+
+            return domToString(doc);
+        } catch (Exception e) {
+            if (logger != null) {
+                logger.severe("Error building CPR pacs.002 batch: " + e.getMessage());
+            }
             return "";
         }
     }

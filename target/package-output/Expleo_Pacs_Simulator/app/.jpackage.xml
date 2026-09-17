@@ -1,5 +1,0 @@
-<?xml version="1.0" ?>
-<jpackage-state version="17.0.7" platform="windows">
-  <app-version>0.0.1</app-version>
-  <main-launcher>Expleo_Pacs_Simulator</main-launcher>
-  <signed>false</signed></jpackage-state>
